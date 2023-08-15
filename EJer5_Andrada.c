@@ -1,19 +1,18 @@
 #include <stdio.h>
-int acu=0;
-void Resistencia(int a, int b)
+void Resistencia(int a, int b, int c)
 {
 	printf("Resistencia N°%d: %d\n",a,b);
-	acu=b+acu;
+	c=b+c;
 	if (a==5)
-		printf("Total: %d",acu);
+		printf("Total: %d",c);
 }
 int main(int argc, char *argv[]) {
-	int r,i;
+	int r,i,acu=0;
 	for (i=1;i<6;i++)
 	{
 		printf("Ingrese Resistencia: ");
 		scanf("%d",&r);
-		Resistencia(i,r);
+		Resistencia(i,r,acu);
 	}
 	return 0; 
 }
