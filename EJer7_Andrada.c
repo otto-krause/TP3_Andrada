@@ -1,19 +1,24 @@
 #include <stdio.h>
-int Resistencia(int a, int b,int c)
+void Mayor(int a, int b)
 {
-	printf("Resistencia N°%d: %d\n",a,b);
-	c=b+c;
-	if (a==5)
-		printf("Total: %d",c);
-	return c;
+if (a>b)
+   printf("%d es el mayor",a);
+else
+{
+   if(b>a)
+     printf("%d es el mayor",b);
+   else
+     printf("Ambos son iguales");
+ }
 }
+
+
 int main(int argc, char *argv[]) {
-	int r,i,acu=0;
-	for (i=1;i<6;i++)
-	{
-		printf("Ingrese Resistencia: ");
-		scanf("%d",&r);
-		acu=Resistencia(i,r,acu);
-	}
-	return 0; 
+  int num,num2;
+  printf("Ingrese un numero: ");
+  scanf("%d",&num);
+  printf("Ingrese otro numero: ");
+  scanf("%d",&num2);
+  Mayor(num,num2);
+  return 0;
 }
